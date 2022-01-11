@@ -1,0 +1,29 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+nav {
+    width: 50%;
+    margin-top: 50px;
+}
+ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    display: block;
+    /* border: 1px solid black; */
+    padding: 3px 8px;
+}
+
+a:hover {
+    border-bottom: 1px solid black;
+}
