@@ -3,10 +3,7 @@ body {
     margin: 0;
     font-family: sans-serif;
 }
-nav {
-    width: 40%;
-    margin-top: 50px;
-}
+
 ul {
     display: flex;
     justify-content: space-around;
@@ -15,43 +12,145 @@ ul {
 
 a {
     text-decoration: none;
+    /* list-style: none; */
     color: black;
     font-size: 25px;
+    font-weight: bold;
 }
 
 li {
     display: block;
     /* border: 1px solid black; */
     padding: 3px 8px;
+    list-style: none;
 }
 
-a:hover {
-    border-bottom: 2px solid black;
-    box-shadow: 5px 5px lightgrey;
+.menu:hover {
+    /* border-bottom: 2px solid black; */
+    border: 1px solid black;
+    padding: 10px;
+    
 }
 .container {
-    margin: 50px;
-}
-#gallery {
-    width: 100%;
-    height: 500px;
-    background-color: orange;
+    margin: 50px 150px;
 }
 
-#about {
-    width: 100%;
-    height: 500px;
-    background-color: red;
+.welcome {
+    /* font-size: 30px; */
+    font-family: "Source Code Pro", monospace;
+    position: relative;
+    width: fit-content;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    /* font-size: 50px; */
+    /* outline: 2px solid red; */
+}
+.welcome::before,
+.welcome::after {
+    content: "";
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
-#contact {
-    width: 100%;
-    height: 500px;
-    background-color: green;
+.welcome::before {
+    background: white;
+    animation: type 6s steps(33) 1s forwards;
+}
+.welcome::after {
+    width: 0.125em;
+    background: black;
+    animation: type 6s steps(33) 1s forwards, blink 750ms steps(33) infinite;
+}
+@keyframes type {
+    to {
+        left: 100%; 
+    }
+}
+@keyframes blink {
+    to {
+        background: transparent;
+    }
+}
+.area {
+    /* width: 100%; */
+    height: 700px;
+    margin-top:100px;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    border: 1px solid black;
+}
+.active {
+    background: black;
+    color: white;
+    padding: 10px;   
 }
 
-#home {
-    width: 100%;
-    height: 500px;
-    background-color: yellow;
+.group {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
 }
+
+.group > div > h3 {
+    font-size: 25px;
+}
+.social {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    /* width: fit-content;
+    height: fit-content; */
+}
+
+.logo > img {
+    width: 50px;
+    height: 50px;
+    transition: all 0.2s linear;
+}
+
+.logo > img:hover {
+    width: 70px;
+    height: 70px;
+}
+
+.address {
+    font-weight: bold;
+}
+
+.scroll {
+    height: 100%;
+    overflow: hidden;
+    overflow: auto;
+}
+.total {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* align-items: center; */
+    margin: auto;
+    list-style: none;
+    text-decoration: none;
+
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 50px auto;
+    gap: 50px;
+   
+}
+
+.gallery > img {
+    width: 400px;
+    height: 400px;
+    background-color: white;
+}
+
+
